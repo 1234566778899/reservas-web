@@ -208,6 +208,9 @@
 .horario-item {
     cursor: pointer;
 }
+.horario-item:hover{
+    filter: brightness(0.9);
+}
 .naranja{
     background-color: #F59F16;
 }
