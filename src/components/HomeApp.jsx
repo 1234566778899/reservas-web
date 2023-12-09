@@ -84,7 +84,9 @@ export const HomeApp = () => {
         <>
             <div className="container">
                 <div className="row">
-                    <h3>Reserva de cubículos</h3>
+                    <div className="d-flex justify-content-between mt-2">
+                        <h3>Reserva de cubículos</h3><button className='btn btn-dark' onClick={()=>navigate('/login')}>Salir</button>
+                    </div>
                     <hr />
                     <span className='fs-3'>{fecha.getDate()}/{fecha.getMonth() + 1}/{fecha.getFullYear()}</span>
                     <div className='box-fecha'>
