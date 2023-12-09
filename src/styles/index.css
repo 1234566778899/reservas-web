@@ -1,0 +1,223 @@
+.turnos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.turnos>div {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.turnos>div:hover {
+    filter: brightness(0.9);
+}
+
+.leyenda {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.leyenda>div {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.color {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.verde {
+    background-color: rgb(67, 205, 115);
+}
+
+.rojo {
+    background-color: red;
+}
+
+.gris {
+    background-color: rgb(198, 198, 198);
+}
+
+.box-fecha {
+    display: flex;
+    align-items: center;
+}
+
+.iconos {
+    margin-left: 10px;
+}
+
+.iconos span {
+    padding: 3px 6px;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 2px;
+}
+
+.iconos span:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.date {
+    border: 1px solid rgb(92, 92, 92);
+    padding: 2px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.date:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.date span {
+    margin-left: 5px;
+}
+
+.navbar {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.admin {
+    height: 100vh;
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.menu {
+    border-right: 1.5px solid rgb(228, 228, 228);
+    padding-left: 20px;
+    width: 170px;
+    padding-top: 10px;
+    background-color: #F8F8F8;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 60px;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+.content {
+    background-color: #F5F5F5;
+    padding-left: 120px;
+}
+
+.par {
+    background-color: #F2F2F2;
+}
+
+.item {
+    display: flex;
+    margin: 25px 0px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item:hover {
+    color: #E50A17;
+}
+
+.icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: translateY(-3px);
+}
+
+.icon-delete:hover {
+    color: #E50A17;
+}
+
+.icon-confi:hover {
+    color: rgb(0, 140, 255);
+}
+
+.item i {
+    font-size: 25px;
+}
+
+.item span {
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.boton {
+    outline: none;
+    padding: 5px 20px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+.boton:hover {
+    filter: brightness(0.9);
+}
+
+.boton-primary {
+    background-color: #E50A17;
+}
+
+.boton-secondary {
+    background-color: #BCD1FB;
+    color: #3F2294;
+}
+
+.espacio {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-left: 1px solid rgb(123, 123, 123);
+    border-top: 1px solid rgb(150, 150, 150);
+    border-right: 1px solid rgb(161, 161, 161);
+    height: 40px;
+}
+
+.hora {
+    display: flex;
+}
+
+.hora>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0px 10px;
+    border-top: 1px solid rgb(161, 161, 161);
+    border-right: 1px solid rgb(161, 161, 161);
+}
+
+.cont-hora {
+    overflow-x: scroll;
+}
+
+.horario-item {
+    cursor: pointer;
+}
+.naranja{
+    background-color: #F59F16;
+}
+.ultimo {
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.oculto {
+    visibility: hidden;
+}
+.h-verde{
+    background-color:  rgb(47, 162, 87);
+}
