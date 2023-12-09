@@ -2,6 +2,7 @@ import axios from 'axios';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { CONFIG } from '../config';
 
 export const HomeApp = () => {
     const [fecha, setfecha] = useState(new Date());
@@ -18,21 +19,21 @@ export const HomeApp = () => {
 
     }
     const getHorario = () => {
-        axios.get('http://localhost:4000/horario/retrieve')
+        axios.get(`${CONFIG.url}/horario/retrieve`)
             .then(res => {
                 setHorario(res.data);
             })
             .catch(error => console.log(error));
     }
     const getCubiculos = () => {
-        axios.get('http://localhost:4000/cubiculo/retrieve')
+        axios.get(`${CONFIG.url}/cubiculo/retrieve`)
             .then(res => {
                 setCubiculos(res.data);
             })
             .catch(error => console.log(error));
     }
     const getReservas = (date) => {
-        axios.post('http://localhost:4000/reserva/date/retrieve', { date })
+        axios.post(`${CONFIG.url}/reserva/date/retrieve`, { date })
             .then(res => {
                 setReservas(res.data);
             })
@@ -62,7 +63,7 @@ export const HomeApp = () => {
             },
             cubiculo: reserva[0].cubiculo
         }
-        axios.post('http://localhost:4000/reserva/register', data)
+        axios.post(`${CONFIG.url}/reserva/register`, data)
             .then(res => {
                 navigate('/confirmacion')
             }).catch(error => {

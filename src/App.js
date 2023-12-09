@@ -8,6 +8,7 @@ import { ReservaApp } from './components/ReservaApp';
 import { HorarioApp } from './components/HorarioApp';
 import { LoginApp } from './components/LoginApp';
 import { ConfirmacionApp } from './components/ConfirmacionApp';
+import { RegisterApp } from './components/RegisterApp';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomeApp />} />
         <Route exact path='/login' element={<LoginApp/>} />
+        <Route exact path='/register' element={<RegisterApp/>} />
         <Route exact path='/confirmacion' element={<ConfirmacionApp/>} />
         <Route exact path='/home' element={<HomeApp />} />
         <Route path='/admin/*' element={<AdminApp />}>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { ModalApp } from './ModalApp';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { CONFIG } from '../config';
 
 export const ListcubiculosApp = () => {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ export const ListcubiculosApp = () => {
     const closeModal = () => setShowModal(false);
 
     const submitAddCubiculo = (data) => {
-        axios.post('http://localhost:4000/cubiculo/register', data)
+        axios.post(`${CONFIG.url}/cubiculo/register`, data)
             .then(res => {
                 setCubiculos(x => ([...x, data]));
                 closeModal();
@@ -21,7 +22,7 @@ export const ListcubiculosApp = () => {
             .catch(error => console.log(error));
     }
     const getCubiculos = () => {
-        axios.get('http://localhost:4000/cubiculo/retrieve')
+        axios.get(`${CONFIG.url}/cubiculo/retrieve`)
             .then(res => {
                 setCubiculos(res.data);
             })

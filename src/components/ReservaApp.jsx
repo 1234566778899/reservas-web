@@ -1,12 +1,13 @@
 import axios from 'axios';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react'
+import { CONFIG } from '../config';
 
 export const ReservaApp = () => {
     const [reservas, setReservas] = useState([]);
     const [isRango, setisRango] = useState(false);
     const getReservas = () => {
-        axios.get('http://localhost:4000/reserva/retrieve')
+        axios.get(`${CONFIG.url}/reserva/retrieve`)
             .then(res => {
                 setReservas(res.data);
             })

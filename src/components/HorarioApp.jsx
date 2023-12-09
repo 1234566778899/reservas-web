@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { CONFIG } from '../config';
 
 export const HorarioApp = () => {
     const [turnos, setturnos] = useState([]);
 
     const getHorario = () => {
-        axios.get('http://localhost:4000/horario/retrieve')
+        axios.get(`${CONFIG.url}/horario/retrieve`)
             .then(res => {
                 setturnos(res.data);
             })
@@ -13,7 +14,7 @@ export const HorarioApp = () => {
     }
     const updateEstado = (id, estado) => {
         estado = estado == 'disponible' ? 'indisponible' : 'disponible';
-        axios.put(`http://localhost:4000/horario/update/${id}`, { estado })
+        axios.put(`${CONFIG.url}/horario/update/${id}`, { estado })
             .then(res => {
                 const aux = turnos.map(x => x._id == id ? { ...x, estado } : x);
                 setturnos(aux);
